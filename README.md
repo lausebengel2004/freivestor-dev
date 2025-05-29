@@ -1,57 +1,92 @@
-# React + TypeScript + Vite
+# 🧠 FreiVestor – Dein modulares Finanz-Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**FreiVestor** ist ein modernes, erweiterbares Tool zur Verwaltung, Analyse und Optimierung deiner finanziellen Situation. Ziel ist es, ein modulares Ökosystem zu schaffen, das von Schuldenabbau über Investitionsplanung bis hin zu Steueroptimierung alles abdeckt – strukturiert, datenbasiert und nachvollziehbar.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Techstack
 
-## Expanding the ESLint configuration
+* [x] **React** (TypeScript, Vite)
+* [x] **TailwindCSS** für UI
+* [x] **Aliasstruktur** (`@features`, `@styles`, `@components`, `@assets`)
+* [x] Lokale + GitHub-Synchronisierung
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📁 Projektstruktur
+
+```txt
+src/
+├── assets/             → Bilder, Logos, Icons
+├── components/         → UI-Komponenten (generisch)
+├── features/           → Feature-Bereiche (z. B. start, schuldenfrei, portfolio)
+├── styles/             → Tailwind-Styling (global.css)
+├── App.tsx             → Einstiegspunkt React
+├── main.tsx            → ReactDOM + CSS-Import
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Alias-Konfiguration erfolgt in `vite.config.ts`:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```ts
+@              → src/
+@features      → src/features
+@components    → src/components
+@styles        → src/styles
+@assets        → src/assets
 ```
+
+---
+
+## 🧪 Starten
+
+```bash
+npm install
+npm run dev
+```
+
+> Öffne dann: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## ✅ Aktueller Stand (Mai 2025)
+
+* Projekt lokal aufgesetzt
+* GitHub-Anbindung über `freivestor-dev`
+* Tailwind korrekt integriert
+* `Startseite.tsx` zeigt Willkommensnachricht
+
+---
+
+## 📌 Nächste Schritte
+
+* [ ] `@features/schuldenfrei/` vorbereiten (Eingabe, Plan, Anzeige)
+* [ ] Theme-System starten (Farben, Fonts, Spacing via Tailwind `extend`)
+* [ ] UI-Komponenten strukturieren (Cards, Buttons, InputFields)
+* [ ] Design-Doku (`design.md`) erstellen
+* [ ] `zustand` oder `context` als State-Management vorbereiten
+* [ ] `.vscode/settings.json` für Autoimport & Alias-IntelliSense
+
+---
+
+## 🧠 Empfohlene Git-Arbeitsweise
+
+* Nutze **sprechende Commits**
+* Branches pro Modul: `feature/schuldenfrei-plan`, `feature/theme-system`
+* `main` bleibt stabil – Änderungen zuerst in Feature-Branch testen
+
+```bash
+git checkout -b feature/schuldenfrei-plan
+git add .
+git commit -m "feat: erste Eingabemaske für Schuldner erstellt"
+git push origin feature/schuldenfrei-plan
+```
+
+---
+
+## 💬 Fragen oder Module starten
+
+> Sag im Chat einfach: `Starte Schuldenfrei-Modul` oder `Mach mir das Theme-System auf`. Ich führe dich Schritt für Schritt durch den Aufbau.
+
+---
+
+*Stand: 29.05.2025 – Maintainer: Thomas (lausebengel2004)*
