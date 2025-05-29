@@ -34,6 +34,16 @@ Alias-Konfiguration erfolgt in `vite.config.ts`:
 @styles        → src/styles
 @assets        → src/assets
 ```
+## Import-Regeln in FreiVestor
+
+- 📦 **TypeScript/React-Komponenten:**  
+  Verwende konsequent Projekt-Aliase (`@features/`, `@layout/`, `@components/`)
+
+- 🎨 **CSS/Tailwind:**  
+  Verwende IMMER relative Imports wie `./styles/global.css`, sonst wird Tailwind nicht angewendet.
+
+- 🖼️ **Bilder & statische Assets:**  
+  Liegen in `/public/assets/` und werden mit `/assets/...` referenziert (kein Alias!).
 
 ---
 
