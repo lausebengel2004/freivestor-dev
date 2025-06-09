@@ -1,15 +1,14 @@
-// 📁 tailwind.config.ts
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}" // Wichtig für Komponentenscan!
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        dark: "#1f2937" // für `bg-dark`
+      }
+    }
   },
   plugins: []
-};
-
-export default config;
+}
