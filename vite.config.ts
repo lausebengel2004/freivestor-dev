@@ -15,7 +15,8 @@ export default defineConfig({
       "@features": path.resolve(__dirname, "src/features"),
       "@layout": path.resolve(__dirname, "src/layout"),
       "@agenten": path.resolve(__dirname, "src/agenten"),
-      "@meta": path.resolve(__dirname, "src/meta")
+      "@meta": path.resolve(__dirname, "src/meta"),
+      "@context": path.resolve(__dirname, "src/context")
     }
   }
 })

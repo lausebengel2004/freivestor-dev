@@ -1,5 +1,6 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
+import ThemeSwitcher from "@components/ui/ThemeSwitcher"
 
 type PageLayoutProps = {
   title?: string
@@ -28,10 +29,14 @@ export default function PageLayout({ title, children }: PageLayoutProps) {
         </nav>
       </aside>
 
-      {/* Content */}
+      {/* Main Content + Header mit ThemeSwitcher */}
       <main className="p-8">
-        <header className="mb-6 border-b border-gray-700 pb-2">
+        <header className="mb-6 border-b border-gray-700 pb-2 flex justify-between items-center">
           <h1 className="text-2xl font-bold tracking-wide">{title ?? "FreiVestor"}</h1>
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-gray-400">beta</span>
+            <ThemeSwitcher />
+          </div>
         </header>
         {children}
       </main>

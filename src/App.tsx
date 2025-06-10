@@ -2,6 +2,7 @@ import React from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import PageLayout from "@layout/PageLayout"
 import Startseite from "@features/start/Startseite"
+import { ThemeProvider } from "@context/ThemeContext"
 
 // Platzhalter für künftige Tools
 const Schuldenfrei = () => <div className="p-6">📘 Schuldenfrei-Tool kommt bald</div>
@@ -10,6 +11,7 @@ const EinkommensTool = () => <div className="p-6">💸 Einkommensverteiler kommt
 
 export default function App() {
   return (
+    <ThemeProvider>
     <Router>
       <PageLayout title="FreiVestor">
         <Routes>
@@ -20,5 +22,6 @@ export default function App() {
         </Routes>
       </PageLayout>
     </Router>
+    </ThemeProvider>
   )
 }

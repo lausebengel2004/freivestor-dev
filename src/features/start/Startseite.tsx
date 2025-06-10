@@ -5,7 +5,6 @@ import Card from "@components/ui/Card"
 import Section from "@components/ui/Section"
 import Badge from "@components/ui/Badge"
 
-
 export default function Startseite() {
   return (
     <div className="text-center py-12 space-y-4 bg-gray-900 min-h-screen">
@@ -21,7 +20,7 @@ export default function Startseite() {
       <Button variant="primary" onClick={() => alert("Los geht’s!")}>
          ➤ Los geht’s
       </Button>
-      
+
       <Section title="Module">
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
     <Card>
