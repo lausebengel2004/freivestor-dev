@@ -1,6 +1,10 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import Button from "@components/ui/Button"
+import Card from "@components/ui/Card"
+import Section from "@components/ui/Section"
+import Badge from "@components/ui/Badge"
+
 
 export default function Startseite() {
   return (
@@ -17,6 +21,22 @@ export default function Startseite() {
       <Button variant="primary" onClick={() => alert("Los geht’s!")}>
          ➤ Los geht’s
       </Button>
+      
+      <Section title="Module">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <Card>
+      <h3 className="text-xl font-bold text-white mb-2">📘 Schuldenfrei</h3>
+      <p className="text-white/80 text-sm mb-4">Plane deine Rückzahlung und feiere jeden Schritt.</p>
+      <Badge variant="success">Verfügbar</Badge>
+    </Card>
+
+    <Card>
+      <h3 className="text-xl font-bold text-white mb-2">📊 Portfolio</h3>
+      <p className="text-white/80 text-sm mb-4">Verfolge dein Vermögen mit stoischer Ruhe.</p>
+      <Badge variant="warning">In Arbeit</Badge>
+    </Card>
+  </div>
+</Section>
     </div>
   )
 }
