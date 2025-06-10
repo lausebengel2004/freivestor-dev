@@ -8,10 +8,11 @@ export default function ThemeSwitcher() {
   return (
     <button
       onClick={toggleTheme}
-      className="text-white hover:text-primary transition"
+      className="text-white hover:text-primary transition flex items-center gap-1"
       title="Theme wechseln"
     >
-      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+      {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
+      <span className="text-sm hidden sm:inline">{theme}</span>
     </button>
   )
 }
