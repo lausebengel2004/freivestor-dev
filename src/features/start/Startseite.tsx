@@ -13,9 +13,10 @@ export default function Startseite() {
       >
         ➤ Zum Schuldenfrei-Tool
       </Link>
+
       <Button variant="primary" onClick={() => alert("Los geht’s!")}>
-  ➤ Los geht’s
-</Button>
+         ➤ Los geht’s
+      </Button>
     </div>
   )
 }

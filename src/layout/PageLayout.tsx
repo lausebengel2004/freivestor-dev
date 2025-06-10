@@ -10,7 +10,7 @@ export default function PageLayout({ title, children }: PageLayoutProps) {
   return (
     <div className="min-h-screen grid grid-cols-[200px_1fr] bg-gray-900 text-white">
       {/* Sidebar */}
-      <aside className="bg-gray-800 p-4 space-y-4">
+      <aside className="bg-gray-900 p-4 space-y-4">
         <h2 className="text-lg font-bold">FreiVestor</h2>
         <nav className="flex flex-col gap-2">
           <NavLink to="/" className={({ isActive }) =>
