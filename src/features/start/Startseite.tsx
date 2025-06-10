@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Button from "@components/ui/Button"
 
 export default function Startseite() {
   return (
@@ -13,5 +14,8 @@ export default function Startseite() {
         ➤ Zum Schuldenfrei-Tool
       </Link>
     </div>
+    <Button variant="primary" onClick={() => alert("Los geht’s!")}>
+  ➤ Los geht’s
+</Button>
   )
 }
